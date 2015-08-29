@@ -1,0 +1,29 @@
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cellwhite {
+  background-color: white;
+}
+
+.cellblack {
+  background-color: black;
+}
+
+.pieceblack {
+  color: black;
+  background: -webkit-radial-gradient(circle, white, black);
+}
+
+.piecewhite {
+  color: white;
+  background: black;
+}
