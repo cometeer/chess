@@ -34,10 +34,29 @@ Template.board.helpers({
     }
     return rows;
   },
-  deb: function () {
+  debug: function () {
     console.log(this);
-  },
-  mark: function(){
-    
+  }
+});
+
+Template.board.events({
+  'click .cell': function (event) {
+    console.log(event.currentTarget.children[0].id);
+    // find the right square on the board
+    var boardId = Session.get('currentGame');
+    var squareNum = event.currentTarget.children[0].id;
+    var square = ChessGame.getSquare(boardId, squareNum);
+    // Instantiate the piece again cuz mongo ate it's methods
+    if (square.piece && square.piece !== {}) {
+      switch (square.piece.type) {
+      case 'pawn':
+        square.piece = new ChessGame.Pawn(square.piece.color);
+        break;
+      }
+      console.log(square);
+      // get the valid moves for this piece
+      var moveOptions = square.piece.validMoves(square);
+      console.log(moveOptions);
+    }
   }
 });
