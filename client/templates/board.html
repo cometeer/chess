@@ -1,16 +1,9 @@
-<template name="game">
-  <button class="newGame">New Game</button>
-  {{#if currentGame }} This is game: {{ game._id }}
-  <br> {{ game.player1 }} VS. {{ game.player2 }}
-  <br> {{> board }} {{ else }} No game selected {{/if }}
-</template>
-
 <template name="board">
   <div class="board">
     {{#each rows }}
     <div class="row">
       {{#each this }}
-      <div class="cell cell{{color}}" id="{{ rank }}{{ file }}">
+      <div class="cell cell{{color}} {{#if moveIndicator}}indicate{{/if}}" id="{{ rank }}{{ file }}">
         <div class="piece{{this.piece.color}} {{this.piece.type}}" id="{{this.arrayLoc}}">
           {{this.piece.unicodeChar}}
         </div>
