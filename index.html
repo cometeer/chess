@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Chess by cometeer</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Chess</h1>
+        <h2>A game of thro... no wait.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/cometeer/chess/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/cometeer/chess/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/cometeer/chess" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p><a href="https://waffle.io/cometeer/chess"><img src="https://badge.waffle.io/cometeer/chess.png?label=ready&amp;title=Ready" alt="Stories in Ready"></a></p>
+
+<h2>
+<a id="chess-game" class="anchor" href="#chess-game" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chess Game</h2>
+
+<p>This project is mostly a learning exercise to practice my javascript skills. </p>
+
+<h3>
+<a id="maybe-interesting-design-and-implementation-choices" class="anchor" href="#maybe-interesting-design-and-implementation-choices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maybe interesting design and implementation choices</h3>
+
+<ul>
+<li>The board is everything, well maybe, a bit. The board is generated for each game and contains the squares that can or cannot hold pieces. The pieces are actually included in the JSON object of the board and whenever something needs to be done with a piece it is re-instantiated based on it's type. Since the logic of a piece is static and derives completely from it's current location this is possible and seems to work well.</li>
+<li>offsets for moves</li>
+<li>
+</ul>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
