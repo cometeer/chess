@@ -9,3 +9,9 @@ autopublish
 insecure
 accounts-password
 accounts-ui
+constellation:console
+constellation:subscriptions
+constellation:autopublish
+constellation:session
+babrahams:temple
+constellation:position
