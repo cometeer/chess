@@ -56,7 +56,7 @@ Template.board.events({
         }
       }
     }
-    // If a square that has a piece is clicked show tha possible moves
+    // If a square that has a piece is clicked show the possible moves
     if (square.piece && square.piece !== {}) {
       square.piece = Chess.rePie(square.piece.type, square.arrayLoc);
       // get the valid moves for this piece
