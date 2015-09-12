@@ -9,3 +9,6 @@ autopublish
 insecure
 accounts-password
 accounts-ui
+sanjo:jasmine
+velocity:html-reporter
+babrahams:constellation
