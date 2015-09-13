@@ -65,6 +65,7 @@ Template.board.events({
       console.log('click handler ', square)
       square.piece = Chess.rePie(square.piece.type, square.piece.color);
       // get the valid moves for this piece
+      console.log('click handler ',square)
       var moveOptions = square.piece.validMoves(square);
       // For each valid move update the board to show it.
       Session.set('moveIndicators', moveOptions);
