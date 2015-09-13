@@ -1,6 +1,15 @@
 <template name="game">
   <button class="newGame">New Game</button>
-  {{#if currentGame }} This is game: {{ game._id }}
-  <br> {{ game.player1 }} VS. {{ game.player2 }}
-  <br> {{> board }} {{ else }} No game selected {{/if }}
+  {{#if currentGame }}
+    This is game:
+    {{ game._id }}
+    <br>
+    {{ game.player1 }}
+    VS.
+    {{ game.player2 }}
+    <br>
+    {{> board }}
+    {{ else }}
+    No game selected
+  {{/if }}
 </template>

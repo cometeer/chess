@@ -18,5 +18,5 @@ Template.game.events({
     var newGame = Chess.init();
     Session.set('currentGame', newGame._id);
     console.log(newGame);
-  }
+  } 
 });
