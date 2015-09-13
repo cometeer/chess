@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/cometeer/chess.png?label=ready&title=Ready)](https://waffle.io/cometeer/chess)
 ## Chess Game 
 This project is mostly a learning exercise to practice my javascript skills. 
 
