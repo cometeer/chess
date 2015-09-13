@@ -1,6 +1,8 @@
 /* globals Games, Chess */
+Meteor.subscribe('games');
+
 Template.board.helpers({
-  rows: function () {
+  rows: function() {
     var id = Session.get('currentGame');
     var game = Games.findOne({
       _id: id
@@ -12,7 +14,7 @@ Template.board.helpers({
     }
     return rows;
   },
-  moveIndicator: function () {
+  moveIndicator: function() {
     var squareNum = this.arrayLoc;
     var indicators = Session.get('moveIndicators');
     var i;
@@ -25,14 +27,16 @@ Template.board.helpers({
     }
     return false;
   },
-  debug: function () {
+  debug: function() {
     console.log(this);
   }
 });
 
 Template.board.events({
-  'click .cell': function (event) {
-    var squareNum = event.currentTarget.children[0].id;
+  'click .cell': function(event) {
+    console.log('event', event);
+    var squareNum = event.currentTarget.children[0].id | 0;
+    console.log('event.squareNum', squareNum);
     var boardId = Session.get('currentGame');
     var square = Chess.getSquare(boardId, squareNum);
     // if it's already selected clear the selection and quit
@@ -56,9 +60,10 @@ Template.board.events({
         }
       }
     }
-    // If a square that has a piece is clicked show tha possible moves
+    // If a square that has a piece is clicked show the possible moves
     if (square.piece && square.piece !== {}) {
-      square.piece = Chess.rePie(square.piece.type, square.arrayLoc);
+      console.log('click handler ', square)
+      square.piece = Chess.rePie(square.piece.type, square.piece.color);
       // get the valid moves for this piece
       console.log('click handler ',square)
       var moveOptions = square.piece.validMoves(square);

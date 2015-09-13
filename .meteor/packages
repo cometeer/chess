@@ -5,13 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 accounts-password
 accounts-ui
+sanjo:jasmine
+babrahams:constellation
+constellation:velocity
 constellation:console
-constellation:subscriptions
-constellation:autopublish
-constellation:session
-babrahams:temple
-constellation:position

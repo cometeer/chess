@@ -12,11 +12,11 @@
 }
 
 .cellwhite {
-  background-color: white;
+  background-color: #FCFBE3;
 }
 
 .cellblack {
-  background-color: black;
+  background-color: #554236;
 }
 
 .pieceblack {
@@ -34,7 +34,7 @@
 }
 
 .indicate {
-  -webkit-box-shadow: inset 0px 0px 0px 3px #f00;
-  -moz-box-shadow: inset 0px 0px 0px 3px #f00;
-  box-shadow: inset 0px 0px 0px 3px #f00;
+  -webkit-box-shadow: inset 0px 0px 0px 3px #ACC26D;
+  -moz-box-shadow: inset 0px 0px 0px 3px #ACC26D;
+  box-shadow: inset 0px 0px 0px 3px #ACC26D;
 }
