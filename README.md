@@ -7,3 +7,5 @@ This project is mostly a learning exercise to practice my javascript skills.
  - 
  
 <!-- meteor --port $IP:$PORT -->
+
+Wijziging van Mike
